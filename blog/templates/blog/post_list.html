@@ -7,5 +7,16 @@
         <h2>Welcome to my blog!</h2>
         <p>I made this using the Django Girls tutorial!</p>
         <p>I would like to thank everyone who helped my with my tutorial! :)</p>
+	        <div>
+		    <h1><a href="/">Django Girls Blog</a></h1>
+		</div>
+
+		{% for post in posts %}
+		    <div>
+		        <p>published: {{ post.published_date }}</p>
+		        <h1><a href="">{{ post.title }}</a></h1>
+		        <p>{{ post.text|linebreaks }}</p>
+		    </div>
+	{% endfor %}
     </body>
 </html>
